@@ -1,4 +1,5 @@
-docker run --name consul -h $HOSTNAME \
+docker stop consul && docker rm consul
+docker run -d --name consul -h $HOSTNAME \
 	-p 8300:8300 \
 	-p 8301:8301 \
 	-p 8301:8301/udp \
